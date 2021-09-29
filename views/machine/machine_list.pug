@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    h2 무인공병회수기 리스트
+    -for(var i=0; i<rows.length; i++)
+        -var arr = rows[i]
+        ul
+            li
+                a(href='/machine/'+arr.machine_num) #{arr.machine_name} 무인공병회수기
+            li #{arr.machine_name}
+            -if(arr.storable_bottle != 0)
+                li 회수상태 OK
+            -else
+                li 회수상태 off
+            li 소주병, 맥주병 전용
+            li 환급금 : 소주병 100원, 맥주병 130원
+                
+

@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+    #{rows[0]}
+    //- div
+    //-     img(src='/images/machine.jpg' width='90px' height='90px')
+    //- div
+        
+    //-     p #{rows[0].machine_name}
+    //-     p 소주병, 맥주병전용
+    //-     p 환급금
+    //-     p 소주병 100원
+    //-     p 맥주병 130원
+    //- div
+    //-     table
+    //-         tr
+    //-             td 투입가능갯수
+    //-             td #{rows[0].storable_bottle}
+    //-         tr
+    //-             td 현재공병갯수
+    //-             td #{rows[0].now_bottle}
+    //- div 
+    //-     button#location 위치보기

@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+    input#id(type="text" placeholder="id")
+    input#pw(type="password" placeholder="pw")
+    button#send 보내기
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
+    button#join 회원가입
+    script(src="/javascripts/sign/login.js")

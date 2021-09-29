@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+    -if(user){
+        div
+            //- form(action='/myinfo_modify' method='post')
+            img(width='90px' height='90px' src=`/images/${user.profile_img}`)
+            br
+            p
+                //- input(type='file' name='img')
+            p#user_id(name='user_id') #{user.id}
+            p
+                input#user_pw(type='text' name='user_pw' value=user.pw)
+            p
+                input#user_name(type='text' name='user_name' value=user.name)
+            p
+                input#user_tel(type='text' name='user_tel' value=user.tel)
+            p
+                button#modify 수정완료
+                    script(src="https://unpkg.com/axios/dist/axios.min.js")
+            script(src="/javascripts/account/update.js")
+    -}else{
+        script(type='text/javascript').
+            alert('세션이 종료 되었습니다.');
+            location.href = '/';
+    -}

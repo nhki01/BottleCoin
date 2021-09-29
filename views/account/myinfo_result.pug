@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+    //- #{rows[0]}
+    -if(user){
+        div
+            img#img_profile(width='90px' height='90px' src=`/images/${user.profile_img}`)
+        div
+            table
+                tr
+                    td #{user.id}
+                tr
+                    td #{user.pw}
+                tr
+                    td #{user.name}
+                tr
+                    td #{user.tel}
+                tr
+                    td
+                        button#result_modify 수정하기
+        script(src="/javascripts/account/select.js")
+    -}else{
+        script(type='text/javascript').
+            alert('세션이 종료 되었습니다.');
+            location.href='/login';
+    -}

@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+    h2 현재 적립 금액
+    div 
+        p #{user.name}님의 포인트
+        p #{user.point}
+    div 
+         
+        -for(var i=0; i<rows.length; i+ +)
+            ul
+                li #{rows[i].point_date}
+                -if(rows[i].point_where == 0)
+                    li 공병 반납
+                -else if(rows[i].point_where == 1)
+                    li 공병로또
+                -else if(rows[i].point_where == 2)
+                    li 상품권 교환
+                li #{rows[i].point_point}
+

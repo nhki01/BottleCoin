@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+    h2 공병로또내역
+
+    -for(var i=0; i<rows.length; i++)
+        -var arr = rows[i]
+            ul
+                li 
+                    a(href='/lotto/'+arr.round) #{arr.round}
+                

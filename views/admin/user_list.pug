@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    h2 회원 리스트
+    -for(var i=0; i<rows.length; i++)
+        -var arr = rows[i]
+        ul
+            li #{arr.id}
+            li #{arr.pw}
+            li #{arr.name}
+            li #{arr.tel}
+            li #{arr.point}
+            li #{arr.warning}
+            -if(arr.state == 0)
+                li 정상
+            -else if(arr.state == 1)
+                li 정지
+            -else if(arr.state == 2)
+                li 수거자
+                
+

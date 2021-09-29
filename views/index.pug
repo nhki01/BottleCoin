@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div #{user.id}님 안녕하세요!
+  br
+  button#logout 로그아웃
+  button#myinfo 회원정보수정
+  button#delete 회원탈퇴
+  button#point 포인트내역
+  button#lotto 공병로또
+  button#mystore 구매상품내역
+  button#machine 회수기정보
+  
+  script(src="/javascripts/index.js")
